@@ -16,9 +16,13 @@ public class Test : MonoBehaviour
     {
        
 
-        if (Input.GetKeyDown(KeyCode.D))
+        if (Input.GetKey(KeyCode.D))
         {
             TestO.transform.position += new Vector3(5, 0, 0) * Time.deltaTime;
+        }
+        if (Input.GetKey(KeyCode.A))
+        {
+            TestO.transform.position += new Vector3(-5, 0, 0) * Time.deltaTime;
         }
     }
 }
