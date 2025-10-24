@@ -24,5 +24,6 @@ public class Test : MonoBehaviour
         {
             TestO.transform.position += new Vector3(-5, 0, 0) * Time.deltaTime;
         }
+      
     }
 }
