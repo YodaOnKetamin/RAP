@@ -2,6 +2,8 @@ using JetBrains.Annotations;
 using System;
 using UnityEngine;
 
+
+/*
 public class test : MonoBehaviour
 {
     [SerializeField]
@@ -39,3 +41,4 @@ public class test : MonoBehaviour
 
     }
 }
+*/
