@@ -3,11 +3,16 @@ using UnityEngine;
 
 public class Movement : MonoBehaviour
 {
-
+    //Normal movement
     float horizontal;
     float speed = 8f;
     float jumpPower = 16f;
     bool isFacingRight = true;
+
+    //Dashing
+    int dashRange = 0;
+    bool isDashing = false;
+
 
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private Transform groundCheck;
@@ -30,12 +35,16 @@ public class Movement : MonoBehaviour
 
         Flip();
 
+        //Dashing if
         if (Input.GetKeyDown(KeyCode.Q))
         {
             isDashing = true;
             if (isFacingRight == true)
             {
                 
+            } else
+            {
+
             }
 
         }
@@ -61,8 +70,5 @@ public class Movement : MonoBehaviour
             transform.localScale = localScale;
         }
     }
-
-    int dashRange = 0;
-    bool isDashing = false;
 
 }
