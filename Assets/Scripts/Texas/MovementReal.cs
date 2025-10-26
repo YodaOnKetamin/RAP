@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class Movement : MonoBehaviour
@@ -12,8 +13,8 @@ public class Movement : MonoBehaviour
     [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask groundLayer;
 
-// Update is called once per frame
-void Update()
+    // Update is called once per frame
+    void Update()
     {
         horizontal = Input.GetAxisRaw("Horizontal");
 
@@ -28,6 +29,16 @@ void Update()
         }
 
         Flip();
+
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            isDashing = true;
+            if (isFacingRight == true)
+            {
+                
+            }
+
+        }
     }
 
     private void FixedUpdate()
@@ -50,4 +61,8 @@ void Update()
             transform.localScale = localScale;
         }
     }
+
+    int dashRange = 0;
+    bool isDashing = false;
+
 }
